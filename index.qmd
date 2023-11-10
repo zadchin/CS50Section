@@ -1,0 +1,30 @@
+![](assets/img/cs50-black.png)
+
+# Preface {.unnumbered}
+
+This website contains section notes for COMPSCI 50, an Introduction to Computer Science course at Harvard University taught by Professor [David Malan](mailto:malan@harvard.edu). These notes are created by [Zad Chin](mailto:zadchin@college.harvard.edu).
+
+## Logistics
+
+- [Course Website](https://cs50.harvard.edu/indonesia/2024/)
+- Sections: 7:00 - 8:20 pm EDT on Fridays at [Zoom](https://cs50.harvard.edu/indonesia/2024/sections/)
+- Office Hours: 7:00 - 8:20 pm EDTon Fridays at [Zoom](https://cs50.harvard.edu/indonesia/2024/hours/)
+- Manual Pages : [website here](https://manual.cs50.io/)
+- EdStem Discussion: [Ed link](https://cs50.harvard.edu/indonesia/2024/ed/)
+
+
+## Notes
+
+These section notes will be presented as an online book, and the source for this book at <https://zadchin.github.io/STAT210_Section/>. Any typos or errors can be reported at <https://github.com/zadchin/CS50Section/issues>. Thanks for reading. 
+
+
+This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>. 
+
+
+ 
+
+
+
+
+
+$\,$

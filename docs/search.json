@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CS50 Section Notes",
+    "section": "",
+    "text": "Preface\nThis website contains section notes for COMPSCI 50, an Introduction to Computer Science course at Harvard University taught by Professor David Malan. These notes are created by Zad Chin."
+  },
+  {
+    "objectID": "index.html#logistics",
+    "href": "index.html#logistics",
+    "title": "CS50 Section Notes",
+    "section": "Logistics",
+    "text": "Logistics\n\nCourse Website\nSections: 7:00 - 8:20 pm EDT on Fridays at Zoom\nOffice Hours: 7:00 - 8:20 pm EDTon Fridays at Zoom\nManual Pages : website here\nEdStem Discussion: Ed link"
+  },
+  {
+    "objectID": "index.html#notes",
+    "href": "index.html#notes",
+    "title": "CS50 Section Notes",
+    "section": "Notes",
+    "text": "Notes\nThese section notes will be presented as an online book, and the source for this book at https://zadchin.github.io/STAT210_Section/. Any typos or errors can be reported at https://github.com/zadchin/CS50Section/issues. Thanks for reading.\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.\n\\(\\,\\)"
+  },
+  {
+    "objectID": "01_Section_1.html#this-week",
+    "href": "01_Section_1.html#this-week",
+    "title": "Section 1",
+    "section": "This Week",
+    "text": "This Week\nIn this section, we will discuss:\n\nVariables\nTypes\nLoops\nConditions\nFunctions"
+  },
+  {
+    "objectID": "01_Section_1.html#slides",
+    "href": "01_Section_1.html#slides",
+    "title": "Section 1",
+    "section": "Slides",
+    "text": "Slides\nSlides deck are available here: Slide Section 1"
+  },
+  {
+    "objectID": "01_Section_1.html#next-week",
+    "href": "01_Section_1.html#next-week",
+    "title": "Section 1",
+    "section": "Next Week",
+    "text": "Next Week\nNext week, we will discuss:\n\nArray\nString\nCommand Line Argument\n\n\\(\\,\\)"
+  },
+  {
+    "objectID": "02_Section_2.html#this-week",
+    "href": "02_Section_2.html#this-week",
+    "title": "Section 2",
+    "section": "This Week",
+    "text": "This Week\nIn this section, we will discuss:\n\nArray\nString\nCommand Line Argument"
+  },
+  {
+    "objectID": "02_Section_2.html#slides",
+    "href": "02_Section_2.html#slides",
+    "title": "Section 2",
+    "section": "Slides",
+    "text": "Slides\nSlides deck are available here: Slide Section 2"
+  },
+  {
+    "objectID": "02_Section_2.html#section-practice-problems",
+    "href": "02_Section_2.html#section-practice-problems",
+    "title": "Section 2",
+    "section": "Section Practice Problems",
+    "text": "Section Practice Problems\n\nSection Problem 1\nBackground\nIn a classroom, a teacher keeps track of the attendance of students. Each student is assigned a seat number, and their attendance status is recorded as present (1) or absent (0) for a particular day.\nTask\nWrite a program in C that allows the teacher to enter the attendance status for each student and then displays the total number of students present and absent on that day.\nDemo\nDemo in Section\n\n\n\n\n\n\nStarter Code\n\n\n\nCopy and following the following code to a new C file in CS50 codespace to start coding!\n#include <cs50.h>\n#include <stdio.h>\n\n#define CLASS_SIZE 5\n\nint main(void) {\n    int attendance[CLASS_SIZE];\n    int present = 0;\n    int absent = 0;\n\n    // Ask the teacher to enter attendance\n    printf(\"Enter the attendance for each student (1 for present, 0 for absent):\\n\");\n    for (int i = 0; i < CLASS_SIZE; i++) {\n        // Use get_int() to get input from user\n        attendance[i] = get_int(\"Student %d: \", i + 1);\n        \n        // TODO: Add code to count presents and absents\n    }\n    \n    // TODO: Add code to display the total presents and absents\n    \n    return 0;\n}\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nSolution will be released after section! \n\n\n\n\n\nSection Problem 2\nBackground\nGen Z often use acronyms to help remember lists or sequences, for example:\n\nYOLO- You only live once\nFOMO – Fear of missing out\nGOAT – Greatest of all time\n\nLet’s create a program that generates an acronym from a list of words.\nTask\nWrite a program in C that:\nAsks the user to input a certain number of words, stored in an array of strings. Generates an acronym by taking the first letter of each word and concatenating them. Converts the acronym to uppercase. Prints out the final acronym.\nDemo\nDemo in Section\n\n\n\n\n\n\nStarter Code\n\n\n\nCopy and following the following code to a new C file in CS50 codespace to start coding!\n#include <cs50.h>\n#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\n\n#define WORD_COUNT 4 // Number of words in the acronym\n\nint main(void) {\n    string words[WORD_COUNT];\n    \n    //TODO: Initialize acronym\n\n    // Prompt user for words\n    for (int i = 0; i < WORD_COUNT; i++) {\n        words[i] = get_string(\"Enter word %d: \", i + 1);\n    }\n\n    // TODO: Create and print the acronym\n    \n    return 0;\n}\n\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nSolution will be released after section! \n\n\n\n\n\nSection Problem 3\nBackground and Task\nFor the acronym generator, the words that form the acronym can be passed as command-line arguments. Recode the origin code files to take words from command-line arguments to create the acronym.\nDemo\nDemo in Section\n\n\n\n\n\n\nStarter Code\n\n\n\nCopy and following the following code to a new C file in CS50 codespace to start coding!\n#include <cs50.h>\n#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\n\nint main(int argc, string argv[]) {\n    // TODO: Fill up ... to make sure users give at least a certain argc\n    if (...) {\n        printf(\"Usage: ./acronym word1 word2 ... wordN\\n\");\n        return 1;\n    }\n\n    // TODO: Create and print the acronym from command-line arguments\n    \n    return 0;\n}\n\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nSolution will be released after section!"
+  },
+  {
+    "objectID": "02_Section_2.html#next-week",
+    "href": "02_Section_2.html#next-week",
+    "title": "Section 2",
+    "section": "Next Week",
+    "text": "Next Week\nNext week, we will discuss:\n\nStructures in C\nSorting\nSearching\nRecursion\n\nNote: I am out for the next section.Margaret Tanzosh will replace me for the section. Refer her materials.\n\\(\\,\\)"
+  }
+]

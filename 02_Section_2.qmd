@@ -1,0 +1,297 @@
+# Section 2 {.unnumbered}
+
+Last Updated: 10 Nov 2023
+
+Date: 10 Nov 2023
+
+
+## This Week
+In this section, we will discuss:
+
+- Array
+- String
+- Command Line Argument
+
+
+## Slides
+
+Slides deck are available here: [Slide Section 2](https://docs.google.com/presentation/d/1hXexoeU-Bq_WKdOZvESQSUM0wd2YPNAA6g9FvRU9PP8/edit?usp=sharing)
+
+## Section Practice Problems
+
+### Section Problem 1
+
+**Background**
+
+In a classroom, a teacher keeps track of the attendance of students. Each student is assigned a seat number, and their attendance status is recorded as present (1) or absent (0) for a particular day.
+
+**Task**
+
+Write a program in C that allows the teacher to enter the attendance status for each student and then displays the total number of students present and absent on that day.
+
+**Demo**
+
+Demo in Section
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+Copy and following the following code to a new C file in CS50 codespace to start coding!
+
+
+```
+#include <cs50.h>
+#include <stdio.h>
+
+#define CLASS_SIZE 5
+
+int main(void) {
+    int attendance[CLASS_SIZE];
+    int present = 0;
+    int absent = 0;
+
+    // Ask the teacher to enter attendance
+    printf("Enter the attendance for each student (1 for present, 0 for absent):\n");
+    for (int i = 0; i < CLASS_SIZE; i++) {
+        // Use get_int() to get input from user
+        attendance[i] = get_int("Student %d: ", i + 1);
+        
+        // TODO: Add code to count presents and absents
+    }
+    
+    // TODO: Add code to display the total presents and absents
+    
+    return 0;
+}
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Solution will be released after section!
+<!--
+```
+#include <cs50.h>
+#include <stdio.h>
+
+#define CLASS_SIZE 30
+
+int main(void) {
+    int attendance[CLASS_SIZE];
+    int present = 0;
+    int absent = 0;
+
+    printf("Enter the attendance for each student (1 for present, 0 for absent):\n");
+    for (int i = 0; i < CLASS_SIZE; i++) {
+        // Use get_int() to get input from user
+        attendance[i] = get_int("Student %d: ", i + 1);
+        
+        // Add code to count presents and absents
+        if (attendance[i] == 1) {
+            present++;
+        } else {
+            absent++;
+        }
+    }
+
+    // Display the total presents and absents
+    printf("Total present: %d\n", present);
+    printf("Total absent: %d\n", absent);
+    
+    return 0;
+}
+```
+-->
+:::
+
+
+### Section Problem 2
+
+**Background**
+
+Gen Z often use acronyms to help remember lists or sequences, for example:
+
+- YOLO- You only live once
+- FOMO – Fear of missing out
+- GOAT – Greatest of all time
+
+Let’s create a program that generates an acronym from a list of words.
+
+**Task**
+
+Write a program in C that:
+
+Asks the user to input a certain number of words, stored in an array of strings.
+Generates an acronym by taking the first letter of each word and concatenating them.
+Converts the acronym to uppercase.
+Prints out the final acronym.
+
+
+**Demo**
+
+Demo in Section
+
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Copy and following the following code to a new C file in CS50 codespace to start coding!
+
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define WORD_COUNT 4 // Number of words in the acronym
+
+int main(void) {
+    string words[WORD_COUNT];
+    
+    //TODO: Initialize acronym
+
+    // Prompt user for words
+    for (int i = 0; i < WORD_COUNT; i++) {
+        words[i] = get_string("Enter word %d: ", i + 1);
+    }
+
+    // TODO: Create and print the acronym
+    
+    return 0;
+}
+
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+Solution will be released after section!
+<!--
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define WORD_COUNT 4 // Number of words in the acronym
+
+int main(void) {
+    string words[WORD_COUNT];
+    char acronym[WORD_COUNT + 1]; // +1 for the null terminator
+
+    // Prompt user for words
+    for (int i = 0; i < WORD_COUNT; i++) {
+        words[i] = get_string("Enter word %d: ", i + 1);
+    }
+
+    // Generate the acronym from the first letter of each word
+    for (int i = 0; i < WORD_COUNT; i++) {
+        // Check if the first character is a letter
+        if (isalpha(words[i][0])) {
+            acronym[i] = toupper(words[i][0]);
+        } else {
+            // Handle the case where the first character is not a letter
+            acronym[i] = 'X'; // Placeholder character
+        }
+    }
+
+    // Null-terminate the acronym string
+    acronym[WORD_COUNT] = '\0';
+
+    // Print the final acronym
+    printf("The acronym is: %s\n", acronym);
+    
+    return 0;
+}
+
+```
+-->
+:::
+
+### Section Problem 3
+
+**Background and Task**
+
+For the acronym generator, the words that form the acronym can be passed as command-line arguments.
+Recode the origin code files to take words from command-line arguments to create the acronym.
+
+**Demo**
+
+Demo in Section
+
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Copy and following the following code to a new C file in CS50 codespace to start coding!
+
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(int argc, string argv[]) {
+    // TODO: Fill up ... to make sure users give at least a certain argc
+    if (...) {
+        printf("Usage: ./acronym word1 word2 ... wordN\n");
+        return 1;
+    }
+
+    // TODO: Create and print the acronym from command-line arguments
+    
+    return 0;
+}
+
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+Solution will be released after section!
+<!--
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(int argc, string argv[]) {
+    if (argc < 2) {
+        printf("Usage: ./acronym word1 word2 ... wordN\n");
+        return 1;
+    }
+
+    for (int i = 1; i < argc; i++) {
+        if (isalpha(argv[i][0])) {
+            printf("%c", toupper(argv[i][0]));
+        }
+    }
+    printf("\n");
+    
+    return 0;
+}
+
+```
+-->
+:::
+
+## Next Week
+Next week, we will discuss:
+
+- Structures in C
+- Sorting
+- Searching
+- Recursion
+
+Note: I am out for the next section.Margaret Tanzosh will replace me for the section. Refer her materials.
+
+
+$\,$

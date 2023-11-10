@@ -1,0 +1,31 @@
+# Section 1 {.unnumbered}
+
+Last Updated: 27 OCT 2023
+
+Date: 27 Oct 2023
+
+
+## This Week
+In this section, we will discuss:
+
+- Variables
+- Types
+- Loops
+- Conditions
+- Functions
+
+
+## Slides
+
+Slides deck are available here: [Slide Section 1](https://docs.google.com/presentation/d/1lYXOmp91vtsPsgeGzNvrRXeTdC-CD3l7Q67xUueOzzc/edit?usp=sharing)
+
+## Next Week
+Next week, we will discuss:
+
+- Array
+- String
+- Command Line Argument
+
+
+
+$\,$
