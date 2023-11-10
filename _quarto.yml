@@ -11,7 +11,7 @@ book:
   favicon: assets/img/cs50duck.jpeg
   output-file: "users-guide"
   reader-mode: true
-  public-url: https://zadchin.github.io/STAT210_Section/
+  public-url: https://zadchin.github.io/CS50Section/
   repo-url: https://github.com/zadchin/CS50Section
   repo-actions: [issue]
   chapters:

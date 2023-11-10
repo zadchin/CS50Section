@@ -15,7 +15,7 @@ This website contains section notes for COMPSCI 50, an Introduction to Computer 
 
 ## Notes
 
-These section notes will be presented as an online book, and the source for this book at <https://zadchin.github.io/STAT210_Section/>. Any typos or errors can be reported at <https://github.com/zadchin/CS50Section/issues>. Thanks for reading. 
+These section notes will be presented as an online book, and the source for this book at <https://zadchin.github.io/CS50Section/>. Any typos or errors can be reported at <https://github.com/zadchin/CS50Section/issues>. Thanks for reading. 
 
 
 This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>. 
