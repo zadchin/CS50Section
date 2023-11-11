@@ -292,12 +292,10 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be released after section! <!--
-```
-#include <cs50.h>
-#include <stdio.h>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
 
-#define CLASS_SIZE 30
+#define CLASS_SIZE 10
 
 int main(void) {
     int attendance[CLASS_SIZE];
@@ -305,15 +303,20 @@ int main(void) {
     int absent = 0;
 
     printf("Enter the attendance for each student (1 for present, 0 for absent):\n");
-    for (int i = 0; i < CLASS_SIZE; i++) {
+    for (int i = 0; i &lt; CLASS_SIZE; i++) {
         // Use get_int() to get input from user
         attendance[i] = get_int("Student %d: ", i + 1);
         
-        // Add code to count presents and absents
+        // Tally presents and absents
         if (attendance[i] == 1) {
             present++;
-        } else {
+        } 
+        else if (attendance[i] == 0)  {
             absent++;
+        }
+        else {
+            printf("Error: Attendance needs to be 0 or 1 \n");
+            return 1;
         }
     }
 
@@ -322,9 +325,7 @@ int main(void) {
     printf("Total absent: %d\n", absent);
     
     return 0;
-}
-```
---></p>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -372,7 +373,9 @@ int main(void) {
         words[i] = get_string("Enter word %d: ", i + 1);
     }
 
-    // TODO: Create and print the acronym
+    // TODO: Generate the acronym from the first letter of each word
+    
+    // TODO: Print the acronym
     
     return 0;
 }
@@ -391,12 +394,10 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be released after section! <!--
-```
-#include <cs50.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;ctype.h&gt;
 
 #define WORD_COUNT 4 // Number of words in the acronym
 
@@ -405,18 +406,20 @@ int main(void) {
     char acronym[WORD_COUNT + 1]; // +1 for the null terminator
 
     // Prompt user for words
-    for (int i = 0; i < WORD_COUNT; i++) {
+    for (int i = 0; i &lt; WORD_COUNT; i++) {
         words[i] = get_string("Enter word %d: ", i + 1);
     }
 
     // Generate the acronym from the first letter of each word
-    for (int i = 0; i < WORD_COUNT; i++) {
+    for (int i = 0; i &lt; WORD_COUNT; i++) {
         // Check if the first character is a letter
         if (isalpha(words[i][0])) {
             acronym[i] = toupper(words[i][0]);
-        } else {
+        } 
+        else {
             // Handle the case where the first character is not a letter
-            acronym[i] = 'X'; // Placeholder character
+            // Placeholder character or print error
+            acronym[i] = 'X';
         }
     }
 
@@ -428,9 +431,7 @@ int main(void) {
     
     return 0;
 }
-
-```
---></p>
+</code></pre>
 </div>
 </div>
 </div>
@@ -464,7 +465,7 @@ int main(int argc, string argv[]) {
         return 1;
     }
 
-    // TODO: Create and print the acronym from command-line arguments
+    // TODO: Generate and print the acronym from command-line arguments
     
     return 0;
 }
@@ -483,20 +484,18 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be released after section! <!--
-```
-#include <cs50.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;ctype.h&gt;
 
 int main(int argc, string argv[]) {
-    if (argc < 2) {
+    if (argc &lt; 2) {
         printf("Usage: ./acronym word1 word2 ... wordN\n");
         return 1;
     }
 
-    for (int i = 1; i < argc; i++) {
+    for (int i = 1; i &lt; argc; i++) {
         if (isalpha(argv[i][0])) {
             printf("%c", toupper(argv[i][0]));
         }
@@ -505,9 +504,7 @@ int main(int argc, string argv[]) {
     
     return 0;
 }
-
-```
---></p>
+</code></pre>
 </div>
 </div>
 </div>

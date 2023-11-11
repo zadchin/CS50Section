@@ -69,13 +69,11 @@ int main(void) {
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be released after section!
-<!--
 ```
 #include <cs50.h>
 #include <stdio.h>
 
-#define CLASS_SIZE 30
+#define CLASS_SIZE 10
 
 int main(void) {
     int attendance[CLASS_SIZE];
@@ -87,11 +85,16 @@ int main(void) {
         // Use get_int() to get input from user
         attendance[i] = get_int("Student %d: ", i + 1);
         
-        // Add code to count presents and absents
+        // Tally presents and absents
         if (attendance[i] == 1) {
             present++;
-        } else {
+        } 
+        else if (attendance[i] == 0)  {
             absent++;
+        }
+        else {
+            printf("Error: Attendance needs to be 0 or 1 \n");
+            return 1;
         }
     }
 
@@ -102,7 +105,6 @@ int main(void) {
     return 0;
 }
 ```
--->
 :::
 
 
@@ -157,7 +159,9 @@ int main(void) {
         words[i] = get_string("Enter word %d: ", i + 1);
     }
 
-    // TODO: Create and print the acronym
+    // TODO: Generate the acronym from the first letter of each word
+    
+    // TODO: Print the acronym
     
     return 0;
 }
@@ -169,8 +173,6 @@ int main(void) {
 
 ## Solution 
 
-Solution will be released after section!
-<!--
 ```
 #include <cs50.h>
 #include <stdio.h>
@@ -193,9 +195,11 @@ int main(void) {
         // Check if the first character is a letter
         if (isalpha(words[i][0])) {
             acronym[i] = toupper(words[i][0]);
-        } else {
+        } 
+        else {
             // Handle the case where the first character is not a letter
-            acronym[i] = 'X'; // Placeholder character
+            // Placeholder character or print error
+            acronym[i] = 'X';
         }
     }
 
@@ -209,7 +213,6 @@ int main(void) {
 }
 
 ```
--->
 :::
 
 ### Section Problem 3
@@ -243,7 +246,7 @@ int main(int argc, string argv[]) {
         return 1;
     }
 
-    // TODO: Create and print the acronym from command-line arguments
+    // TODO: Generate and print the acronym from command-line arguments
     
     return 0;
 }
@@ -255,8 +258,6 @@ int main(int argc, string argv[]) {
 
 ## Solution 
 
-Solution will be released after section!
-<!--
 ```
 #include <cs50.h>
 #include <stdio.h>
@@ -280,7 +281,7 @@ int main(int argc, string argv[]) {
 }
 
 ```
--->
+
 :::
 
 ## Next Week
