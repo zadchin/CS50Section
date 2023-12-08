@@ -119,6 +119,14 @@ Implement a function adjust_brightness in helpers.c to increase or decrease the 
 
 Will be shown in section
 
+**To Test**
+
+1. Run ```make filter```
+
+2. Run this ```filter-practice/ $ ./filter -g images/yard.bmp out.bmp``` to see the original file in out.bmp
+
+3. Run this ```filter-practice/ $ ./filter -b images/yard.bmp out.bmp``` to see the adjusted brightness photo in out.bmp
+
 
 :::{.callout-note appearance="simple"}
 
@@ -127,6 +135,8 @@ Will be shown in section
 Download the starter code file [here](https://drive.google.com/drive/folders/1iZIsj8O5OeGLNOiCaZIi9JBelgWMhJJU?usp=sharing)
 
 :::
+
+
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 
