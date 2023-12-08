@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CS50 Section Notes - Section 1</title>
+<title>CS50 Section Notes - Section 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02_Section_2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./02_Section_2.html" rel="prev">
 <link href="./assets/img/cs50duck.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Section 1</h1>
+      <h1 class="quarto-secondary-nav-title">Section 4</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -114,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_Section_1.html" class="sidebar-item-text sidebar-link active">Section 1</a>
+  <a href="./01_Section_1.html" class="sidebar-item-text sidebar-link">Section 1</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -124,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link">Section 4</a>
+  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link active">Section 4</a>
   </div>
 </li>
     </ul>
@@ -138,6 +137,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#this-week" id="toc-this-week" class="nav-link active" data-scroll-target="#this-week">This Week</a></li>
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#section-practice-problems" id="toc-section-practice-problems" class="nav-link" data-scroll-target="#section-practice-problems">Section Practice Problems</a>
+  <ul class="collapse">
+  <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">Section Problem 1</a></li>
+  <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">Section Problem 2</a></li>
+  </ul></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/zadchin/CS50Section/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -204,7 +208,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Section 1</h1>
+<h1 class="title d-none d-lg-block">Section 4</h1>
 </div>
 
 
@@ -219,30 +223,229 @@ $$
 
 </header>
 
-<p>Last Updated: 27 OCT 2023</p>
-<p>Date: 27 Oct 2023</p>
+<p>Last Updated: 8 Dec 2023</p>
+<p>Date: 8 Dec 2023</p>
 <section id="this-week" class="level2">
 <h2 class="anchored" data-anchor-id="this-week">This Week</h2>
 <p>In this section, we will discuss:</p>
 <ul>
-<li>Variables</li>
-<li>Types</li>
-<li>Loops</li>
-<li>Conditions</li>
-<li>Functions</li>
+<li>Pointers</li>
+<li>Memory Allocation (malloc)</li>
+<li>File I/O</li>
 </ul>
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/1lYXOmp91vtsPsgeGzNvrRXeTdC-CD3l7Q67xUueOzzc/edit?usp=sharing">Slide Section 1</a></p>
+<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing">Slide Section 4</a></p>
+</section>
+<section id="section-practice-problems" class="level2">
+<h2 class="anchored" data-anchor-id="section-practice-problems">Section Practice Problems</h2>
+<section id="section-problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-1">Section Problem 1</h3>
+<p><strong>Background</strong></p>
+<p>Write a function in C that swaps the values of two integers using pointers.</p>
+<p><strong>Task</strong></p>
+<ul>
+<li><p>Understanding pointers is crucial in C programming as they allow for efficient manipulation of variables and memory.</p></li>
+<li><p>The swap function demonstrates a fundamental use of pointers to directly modify the values of variables at their memory addresses.</p></li>
+<li><p>Instead of swapping values using a third temporary variable, this function will directly exchange the values at the memory addresses pointed to by the pointers a and b.</p></li>
+</ul>
+<p><strong>Demo</strong></p>
+<p>Demo in Section</p>
+<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Starter Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Copy and following the following code to a new C file in CS50 codespace to start coding!</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+void swap(int* a, int* b) {
+    // TODO: Implement the logic to swap the values of a and b
+}
+
+
+int main() {
+    int x = 10;
+    int y = 20;
+    
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    //TODO: call on the function swap for x and y: swap(...)
+    
+    printf("After swap: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+</code></pre>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be released after section! :)</p>
+<!--
+
+```
+#include <stdio.h>
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+    
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After swap: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+```
+-->
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-2">Section Problem 2</h3>
+<p><strong>Background</strong></p>
+<p>Implement a “Brightness Adjustment” filter that modifies the brightness of an image. This filter will either increase or decrease the brightness of every pixel in the image based on a given factor.</p>
+<ul>
+<li><p>Brightness is determined by the intensity of the RGB components of a pixel.</p></li>
+<li><p>Increasing brightness involves adding a constant value to each color component (Red, Green, Blue) of a pixel.</p></li>
+<li><p>Decreasing brightness involves subtracting a constant value from each color component.</p></li>
+<li><p>It’s crucial to ensure that the resulting color values are capped between 0 and 255.</p></li>
+</ul>
+<p><strong>Task</strong></p>
+<p>Implement a function adjust_brightness in helpers.c to increase or decrease the brightness of the image. The function should take an additional parameter, brightness_factor, to control the adjustment level.</p>
+<p><strong>Demo</strong></p>
+<p>Will be shown in section</p>
+<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Starter Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download the starter code file <a href="https://drive.google.com/drive/folders/1iZIsj8O5OeGLNOiCaZIi9JBelgWMhJJU?usp=sharing">here</a></p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pseudocode
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>function adjust_brightness(height, width, image, brightness_factor)
+    for each row in image
+        for each pixel in row
+            for each color component (red, green, blue) in pixel
+                new color value = original color value + brightness_factor
+                if new color value &gt; 255
+                    new color value = 255
+                if new color value &lt; 0
+                    new color value = 0
+                update pixel's color component with new color value
+</code></pre>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be released after section! :)</p>
+<!--
+
+Solution 1:
+
+```
+void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+{
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = fmin(fmax(image[i][j].rgbtRed + brightness_factor, 0), 255);
+            image[i][j].rgbtGreen = fmin(fmax(image[i][j].rgbtGreen + brightness_factor, 0), 255);
+            image[i][j].rgbtBlue = fmin(fmax(image[i][j].rgbtBlue + brightness_factor, 0), 255);
+        }
+    }
+}
+```
+
+Solution 2
+
+```
+void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+{
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            // Adjust Red, ensuring it remains within 0-255 range
+            int newRed = image[i][j].rgbtRed + brightness_factor;
+            image[i][j].rgbtRed = newRed > 255 ? 255 : (newRed < 0 ? 0 : newRed);
+
+            // Adjust Green, ensuring it remains within 0-255 range
+            int newGreen = image[i][j].rgbtGreen + brightness_factor;
+            image[i][j].rgbtGreen = newGreen > 255 ? 255 : (newGreen < 0 ? 0 : newGreen);
+
+            // Adjust Blue, ensuring it remains within 0-255 range
+            int newBlue = image[i][j].rgbtBlue + brightness_factor;
+            image[i][j].rgbtBlue = newBlue > 255 ? 255 : (newBlue < 0 ? 0 : newBlue);
+        }
+    }
+}
+
+```
+
+-->
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="next-week" class="level2">
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
-<p>Next week, we will discuss:</p>
+<p>For the following section, we will discuss:</p>
 <ul>
-<li>Array</li>
-<li>String</li>
-<li>Command Line Argument</li>
+<li>Algorithms!</li>
 </ul>
 <p><span class="math inline">\(\,\)</span></p>
 
@@ -500,14 +703,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./02_Section_2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02_Section_2.html" class="pagination-link">
-        <span class="nav-page-text">Section 2</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

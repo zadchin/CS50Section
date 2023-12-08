@@ -1,0 +1,209 @@
+# Section 4 {.unnumbered}
+
+Last Updated: 8 Dec 2023
+
+Date: 8 Dec 2023
+
+
+## This Week
+In this section, we will discuss:
+
+- Pointers
+- Memory Allocation (malloc)
+- File I/O
+
+
+
+## Slides
+
+Slides deck are available here: [Slide Section 4](https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing)
+
+## Section Practice Problems
+
+### Section Problem 1
+
+**Background**
+
+Write a function in C that swaps the values of two integers using pointers.
+
+**Task**
+
+- Understanding pointers is crucial in C programming as they allow for efficient manipulation of variables and memory.
+
+- The swap function demonstrates a fundamental use of pointers to directly modify the values of variables at their memory addresses.
+
+- Instead of swapping values using a third temporary variable, this function will directly exchange the values at the memory addresses pointed to by the pointers a and b.
+
+**Demo**
+
+Demo in Section
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+Copy and following the following code to a new C file in CS50 codespace to start coding!
+
+```
+#include <stdio.h>
+
+void swap(int* a, int* b) {
+    // TODO: Implement the logic to swap the values of a and b
+}
+
+
+int main() {
+    int x = 10;
+    int y = 20;
+    
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    //TODO: call on the function swap for x and y: swap(...)
+    
+    printf("After swap: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Will be released after section! :)
+
+<!--
+
+```
+#include <stdio.h>
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+    
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After swap: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+```
+-->
+:::
+
+
+### Section Problem 2
+
+**Background**
+
+Implement a "Brightness Adjustment" filter that modifies the brightness of an image. This filter will either increase or decrease the brightness of every pixel in the image based on a given factor.
+
+- Brightness is determined by the intensity of the RGB components of a pixel.
+
+- Increasing brightness involves adding a constant value to each color component (Red, Green, Blue) of a pixel.
+
+- Decreasing brightness involves subtracting a constant value from each color component.
+
+- It's crucial to ensure that the resulting color values are capped between 0 and 255.
+
+**Task**
+
+Implement a function adjust_brightness in helpers.c to increase or decrease the brightness of the image. The function should take an additional parameter, brightness_factor, to control the adjustment level.
+
+**Demo**
+
+Will be shown in section
+
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Download the starter code file [here](https://drive.google.com/drive/folders/1iZIsj8O5OeGLNOiCaZIi9JBelgWMhJJU?usp=sharing)
+
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Pseudocode
+```
+function adjust_brightness(height, width, image, brightness_factor)
+    for each row in image
+        for each pixel in row
+            for each color component (red, green, blue) in pixel
+                new color value = original color value + brightness_factor
+                if new color value > 255
+                    new color value = 255
+                if new color value < 0
+                    new color value = 0
+                update pixel's color component with new color value
+
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Will be released after section! :)
+
+<!--
+
+Solution 1:
+
+```
+void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+{
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = fmin(fmax(image[i][j].rgbtRed + brightness_factor, 0), 255);
+            image[i][j].rgbtGreen = fmin(fmax(image[i][j].rgbtGreen + brightness_factor, 0), 255);
+            image[i][j].rgbtBlue = fmin(fmax(image[i][j].rgbtBlue + brightness_factor, 0), 255);
+        }
+    }
+}
+```
+
+Solution 2
+
+```
+void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+{
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            // Adjust Red, ensuring it remains within 0-255 range
+            int newRed = image[i][j].rgbtRed + brightness_factor;
+            image[i][j].rgbtRed = newRed > 255 ? 255 : (newRed < 0 ? 0 : newRed);
+
+            // Adjust Green, ensuring it remains within 0-255 range
+            int newGreen = image[i][j].rgbtGreen + brightness_factor;
+            image[i][j].rgbtGreen = newGreen > 255 ? 255 : (newGreen < 0 ? 0 : newGreen);
+
+            // Adjust Blue, ensuring it remains within 0-255 range
+            int newBlue = image[i][j].rgbtBlue + brightness_factor;
+            image[i][j].rgbtBlue = newBlue > 255 ? 255 : (newBlue < 0 ? 0 : newBlue);
+        }
+    }
+}
+
+```
+
+-->
+:::
+
+
+
+## Next Week
+For the following section, we will discuss:
+
+- Algorithms! 
+
+$\,$
