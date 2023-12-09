@@ -142,6 +142,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">Section Problem 1</a></li>
   <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">Section Problem 2</a></li>
   </ul></li>
+  <li><a href="#homework-tips" id="toc-homework-tips" class="nav-link" data-scroll-target="#homework-tips">Homework tips</a></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/zadchin/CS50Section/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -296,11 +297,7 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-
-```
-#include <stdio.h>
+<pre><code>#include &lt;stdio.h&gt;
 
 void swap(int* a, int* b) {
     int temp = *a;
@@ -313,13 +310,11 @@ int main() {
     int y = 20;
     
     printf("Before swap: x = %d, y = %d\n", x, y);
-    swap(&x, &y);
+    swap(&amp;x, &amp;y);
     printf("After swap: x = %d, y = %d\n", x, y);
 
     return 0;
-}
-```
--->
+}</code></pre>
 </div>
 </div>
 </div>
@@ -395,57 +390,49 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-
-Solution 1:
-
-```
-void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+<p>Solution 1:</p>
+<pre><code>void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
 {
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i &lt; height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j &lt; width; j++)
         {
             image[i][j].rgbtRed = fmin(fmax(image[i][j].rgbtRed + brightness_factor, 0), 255);
             image[i][j].rgbtGreen = fmin(fmax(image[i][j].rgbtGreen + brightness_factor, 0), 255);
             image[i][j].rgbtBlue = fmin(fmax(image[i][j].rgbtBlue + brightness_factor, 0), 255);
         }
     }
-}
-```
-
-Solution 2
-
-```
-void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
+}</code></pre>
+<p>Solution 2</p>
+<pre><code>void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
 {
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i &lt; height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j &lt; width; j++)
         {
             // Adjust Red, ensuring it remains within 0-255 range
             int newRed = image[i][j].rgbtRed + brightness_factor;
-            image[i][j].rgbtRed = newRed > 255 ? 255 : (newRed < 0 ? 0 : newRed);
+            image[i][j].rgbtRed = newRed &gt; 255 ? 255 : (newRed &lt; 0 ? 0 : newRed);
 
             // Adjust Green, ensuring it remains within 0-255 range
             int newGreen = image[i][j].rgbtGreen + brightness_factor;
-            image[i][j].rgbtGreen = newGreen > 255 ? 255 : (newGreen < 0 ? 0 : newGreen);
+            image[i][j].rgbtGreen = newGreen &gt; 255 ? 255 : (newGreen &lt; 0 ? 0 : newGreen);
 
             // Adjust Blue, ensuring it remains within 0-255 range
             int newBlue = image[i][j].rgbtBlue + brightness_factor;
-            image[i][j].rgbtBlue = newBlue > 255 ? 255 : (newBlue < 0 ? 0 : newBlue);
+            image[i][j].rgbtBlue = newBlue &gt; 255 ? 255 : (newBlue &lt; 0 ? 0 : newBlue);
         }
     }
 }
-
-```
-
--->
+</code></pre>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="homework-tips" class="level2">
+<h2 class="anchored" data-anchor-id="homework-tips">Homework tips</h2>
+<p>Homework tips are available in the slide: <a href="https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing">Slide Section 4</a></p>
 </section>
 <section id="next-week" class="level2">
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>

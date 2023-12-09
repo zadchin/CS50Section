@@ -69,9 +69,7 @@ int main() {
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section! :)
 
-<!--
 
 ```
 #include <stdio.h>
@@ -93,7 +91,7 @@ int main() {
     return 0;
 }
 ```
--->
+
 :::
 
 
@@ -159,9 +157,6 @@ function adjust_brightness(height, width, image, brightness_factor)
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section! :)
-
-<!--
 
 Solution 1:
 
@@ -206,8 +201,12 @@ void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], in
 
 ```
 
--->
 :::
+
+
+## Homework tips
+
+Homework tips are available in the slide: [Slide Section 4](https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing)
 
 
 
