@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CS50 Section Notes - Section 4</title>
+<title>CS50 Section Notes - Section 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_Section_5.html" rel="next">
-<link href="./02_Section_2.html" rel="prev">
+<link href="./04_Section_4.html" rel="prev">
 <link href="./assets/img/cs50duck.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Section 4</h1>
+      <h1 class="quarto-secondary-nav-title">Section 5</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -124,12 +123,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link active">Section 4</a>
+  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link">Section 4</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Section_5.html" class="sidebar-item-text sidebar-link">Section 5</a>
+  <a href="./05_Section_5.html" class="sidebar-item-text sidebar-link active">Section 5</a>
   </div>
 </li>
     </ul>
@@ -215,7 +214,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Section 4</h1>
+<h1 class="title d-none d-lg-block">Section 5</h1>
 </div>
 
 
@@ -230,33 +229,29 @@ $$
 
 </header>
 
-<p>Last Updated: 8 Dec 2023</p>
-<p>Date: 8 Dec 2023</p>
+<p>Last Updated: 23 Dec 2023</p>
+<p>Date: 23 Dec 2023</p>
 <section id="this-week" class="level2">
 <h2 class="anchored" data-anchor-id="this-week">This Week</h2>
 <p>In this section, we will discuss:</p>
 <ul>
-<li>Pointers</li>
-<li>Memory Allocation (malloc)</li>
-<li>File I/O</li>
+<li>Linked List</li>
+<li>Hash Tables</li>
+<li>Queue, Stack</li>
 </ul>
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing">Slide Section 4</a></p>
+<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/19kqeQEtSjAVwXkOuCCYKac1H0UnETvxmbBPjXi74EF0/edit?usp=sharing">Slide Section 5</a></p>
 </section>
 <section id="section-practice-problems" class="level2">
 <h2 class="anchored" data-anchor-id="section-practice-problems">Section Practice Problems</h2>
 <section id="section-problem-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-1">Section Problem 1</h3>
 <p><strong>Background</strong></p>
-<p>Write a function in C that swaps the values of two integers using pointers.</p>
+<p>Linked lists are a fundamental data structure in computer science, often used to store sequences of elements. They consist of nodes, where each node contains a piece of data and a pointer to the next node in the list. This structure allows for efficient insertion and deletion of elements. Understanding pointers is crucial for managing linked lists, as they are used to navigate and modify the list structure.</p>
 <p><strong>Task</strong></p>
-<ul>
-<li><p>Understanding pointers is crucial in C programming as they allow for efficient manipulation of variables and memory.</p></li>
-<li><p>The swap function demonstrates a fundamental use of pointers to directly modify the values of variables at their memory addresses.</p></li>
-<li><p>Instead of swapping values using a third temporary variable, this function will directly exchange the values at the memory addresses pointed to by the pointers a and b.</p></li>
-</ul>
+<p>Create a function that reverses a singly linked list. The list is represented by a <code>struct</code> named <code>node</code>, which contains an integer <code>number</code> and a pointer to the next node. Your task is to write a function <code>void reverse(node **head)</code> that takes a pointer to the head of the list and reverses the order of the nodes. The challenge is to manipulate the pointers in each node to reverse the order without creating any new nodes or losing any existing ones.</p>
 <p><strong>Demo</strong></p>
 <p>Demo in Section</p>
 <div class="callout-note callout callout-style-simple callout-captioned">
@@ -269,26 +264,7 @@ Starter Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Copy and following the following code to a new C file in CS50 codespace to start coding!</p>
-<pre><code>#include &lt;stdio.h&gt;
-
-void swap(int* a, int* b) {
-    // TODO: Implement the logic to swap the values of a and b
-}
-
-
-int main() {
-    int x = 10;
-    int y = 20;
-    
-    printf("Before swap: x = %d, y = %d\n", x, y);
-    //TODO: call on the function swap for x and y: swap(...)
-    
-    printf("After swap: x = %d, y = %d\n", x, y);
-
-    return 0;
-}
-</code></pre>
+<p>Copy the code at <a href="https://github.com/zadchin/CS50_Practice-Question/blob/master/section5/Q1.c">here</a></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-simple callout-captioned">
@@ -297,30 +273,81 @@ int main() {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solution
+Tips &amp; Pseudocode
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>#include &lt;stdio.h&gt;
+<p><strong>Example in Words</strong></p>
+<p>Imagine a simple linked list: 1 -&gt; 2 -&gt; 3 -&gt; null</p>
+<ol type="1">
+<li><p>Start: <code>prev</code> = null, <code>current</code> = 1, <code>next</code> = null</p></li>
+<li><p>First Iteration:</p>
+<ul>
+<li>next points to 2 (saving link to next node)</li>
+<li>Reverse link: 1 &lt;- current, but next (2) -&gt; 3</li>
+<li>Move prev to 1, current to 2 (advance pointers)</li>
+<li>Now: null &lt;- 1 &lt;- current (2) -&gt; 3</li>
+</ul></li>
+<li><p>Second Iteration:</p>
+<ul>
+<li>next points to 3</li>
+<li>Reverse link: 2 &lt;- current, but next (3) -&gt; null</li>
+<li>Move prev to 2, current to 3</li>
+<li>Now: null &lt;- 1 &lt;- 2 &lt;- current (3)</li>
+</ul></li>
+<li><p>Final Iteration:</p>
+<ul>
+<li>next is null (end of list)</li>
+<li>Reverse link: 3 -&gt; null</li>
+<li>current becomes null, loop ends</li>
+<li>Final list: null &lt;- 1 &lt;- 2 &lt;- 3</li>
+</ul></li>
+</ol>
+<p>The head of the list now points to 3, achieving the reversed list: 3 -&gt; 2 -&gt; 1 -&gt; null</p>
+<p><strong>Pseudocode</strong></p>
+<pre><code>1. Initialize three pointers: prev (null), current (head of the list), and next (null).
 
-void swap(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+2. Loop while current is not null:
+ - Set next to current-&gt;next (save the next node).
+ - Redirect current-&gt;next to prev (reverse the link).
+ - Move prev to current (advance prev up the list).
+ - Move current to next (advance current up the list).
+ 
+3. After the loop, set the head of the list to prev.</code></pre>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be released after section! :) <!--
+```
+void reverse(node **head) {
+    node *prev = NULL;
+    node *current = *head;
+    node *next = NULL;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *head = prev;
 }
-
-int main() {
-    int x = 10;
-    int y = 20;
-    
-    printf("Before swap: x = %d, y = %d\n", x, y);
-    swap(&amp;x, &amp;y);
-    printf("After swap: x = %d, y = %d\n", x, y);
-
-    return 0;
-}</code></pre>
+```
+--></p>
 </div>
 </div>
 </div>
@@ -328,23 +355,11 @@ int main() {
 <section id="section-problem-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-2">Section Problem 2</h3>
 <p><strong>Background</strong></p>
-<p>Implement a “Brightness Adjustment” filter that modifies the brightness of an image. This filter will either increase or decrease the brightness of every pixel in the image based on a given factor.</p>
-<ul>
-<li><p>Brightness is determined by the intensity of the RGB components of a pixel.</p></li>
-<li><p>Increasing brightness involves adding a constant value to each color component (Red, Green, Blue) of a pixel.</p></li>
-<li><p>Decreasing brightness involves subtracting a constant value from each color component.</p></li>
-<li><p>It’s crucial to ensure that the resulting color values are capped between 0 and 255.</p></li>
-</ul>
+<p>Hash tables are powerful data structures that allow for efficient data retrieval. They map keys to values, using a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This exercise focuses on understanding how to search for items in a hash table, an essential operation known as a lookup.</p>
 <p><strong>Task</strong></p>
-<p>Implement a function adjust_brightness in helpers.c to increase or decrease the brightness of the image. The function should take an additional parameter, brightness_factor, to control the adjustment level.</p>
+<p>Write a function, <code>bool lookup(char* word, node* hashtable[], int size)</code>, that searches for a given word in a hash table. The hash table is represented as an array of linked lists <code>(node* hashtable[])</code>, and <code>size</code> is the number of buckets in the table. The function should return <code>true</code> if the word is found and <code>false</code> otherwise.</p>
 <p><strong>Demo</strong></p>
 <p>Will be shown in section</p>
-<p><strong>To Test</strong></p>
-<ol type="1">
-<li><p>Run <code>make filter</code></p></li>
-<li><p>Run this <code>filter-practice/ $ ./filter -g images/yard.bmp out.bmp</code> to see the original file in out.bmp</p></li>
-<li><p>Run this <code>filter-practice/ $ ./filter -b images/yard.bmp out.bmp</code> to see the adjusted brightness photo in out.bmp</p></li>
-</ol>
 <div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -355,33 +370,7 @@ Starter Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Download the starter code file <a href="https://drive.google.com/drive/folders/1iZIsj8O5OeGLNOiCaZIi9JBelgWMhJJU?usp=sharing">here</a></p>
-</div>
-</div>
-<div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Pseudocode
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<pre><code>function adjust_brightness(height, width, image, brightness_factor)
-    for each row in image
-        for each pixel in row
-            for each color component (red, green, blue) in pixel
-                new color value = original color value + brightness_factor
-                if new color value &gt; 255
-                    new color value = 255
-                if new color value &lt; 0
-                    new color value = 0
-                update pixel's color component with new color value
-</code></pre>
-</div>
+<p>Copy the code at <a href="https://github.com/zadchin/CS50_Practice-Question/blob/master/section5/Q2.c">here</a></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-simple callout-captioned">
@@ -390,47 +379,70 @@ Pseudocode
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solution
+Pseudocode
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution 1:</p>
-<pre><code>void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
-{
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            image[i][j].rgbtRed = fmin(fmax(image[i][j].rgbtRed + brightness_factor, 0), 255);
-            image[i][j].rgbtGreen = fmin(fmax(image[i][j].rgbtGreen + brightness_factor, 0), 255);
-            image[i][j].rgbtBlue = fmin(fmax(image[i][j].rgbtBlue + brightness_factor, 0), 255);
-        }
-    }
-}</code></pre>
-<p>Solution 2</p>
-<pre><code>void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
-{
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            // Adjust Red, ensuring it remains within 0-255 range
-            int newRed = image[i][j].rgbtRed + brightness_factor;
-            image[i][j].rgbtRed = newRed &gt; 255 ? 255 : (newRed &lt; 0 ? 0 : newRed);
+<pre><code>1. Hash the Word using the provided hash function: Use the hash function on the input word to determine the index in the hashtable.
 
-            // Adjust Green, ensuring it remains within 0-255 range
-            int newGreen = image[i][j].rgbtGreen + brightness_factor;
-            image[i][j].rgbtGreen = newGreen &gt; 255 ? 255 : (newGreen &lt; 0 ? 0 : newGreen);
+2. Traverse the Linked List: At the calculated index, traverse the linked list attached to that bucket.
+   - If the current node's word matches the input word, return True.
+   - If not, move to the next node in the list.
 
-            // Adjust Blue, ensuring it remains within 0-255 range
-            int newBlue = image[i][j].rgbtBlue + brightness_factor;
-            image[i][j].rgbtBlue = newBlue &gt; 255 ? 255 : (newBlue &lt; 0 ? 0 : newBlue);
+3. Word Not Found: If the end of the list is reached without finding the word, return False.</code></pre>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be released after section!</p>
+
+<!--
+
+Solution 1:
+
+```
+bool lookup(const char* word, node* hashtable[]) {
+    unsigned int index = hash(word);
+    node *cursor = hashtable[index];
+    while (cursor != NULL) {
+        if (strcmp(cursor->word, word) == 0) {
+            return true;
         }
+        cursor = cursor->next;
     }
+    return false;
 }
-</code></pre>
+```
+
+Solution 2
+
+```
+bool lookup(const char* word, node* hashtable[]) {
+    unsigned int index = hash(word);
+
+    // Use a for loop to traverse the linked list
+    for (node *cursor = hashtable[index]; cursor != NULL; cursor = cursor->next) {
+        if (strcmp(cursor->word, word) == 0) {
+            return true; // Word found
+        }
+    }
+    return false; // Word not found
+}
+```
+-->
 </div>
 </div>
 </div>
@@ -438,13 +450,13 @@ Solution
 </section>
 <section id="homework-tips" class="level2">
 <h2 class="anchored" data-anchor-id="homework-tips">Homework tips</h2>
-<p>Homework tips are available in the slide: <a href="https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing">Slide Section 4</a></p>
+<p>Homework tips are available in the slide: <a href="https://docs.google.com/presentation/d/19kqeQEtSjAVwXkOuCCYKac1H0UnETvxmbBPjXi74EF0/edit?usp=sharing">Slide Section 5</a></p>
 </section>
 <section id="next-week" class="level2">
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
 <p>For the following section, we will discuss:</p>
 <ul>
-<li>Algorithms!</li>
+<li>Python!</li>
 </ul>
 <p><span class="math inline">\(\,\)</span></p>
 
@@ -702,14 +714,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02_Section_2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 2</span>
+      <a href="./04_Section_4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 4</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05_Section_5.html" class="pagination-link">
-        <span class="nav-page-text">Section 5</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

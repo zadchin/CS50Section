@@ -37,35 +37,75 @@ Demo in Section
 
 ## Starter Code
 
-Copy the code at [here]()
+Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/master/section5/Q1.c)
 
 :::
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 
+## Tips & Pseudocode
+
+**Example in Words**
+
+Imagine a simple linked list: 1 -> 2 -> 3 -> null
+
+1. Start: `prev` = null, `current` = 1, `next` = null
+
+2. First Iteration:
+   - next points to 2 (saving link to next node)
+   - Reverse link: 1 <- current, but next (2) -> 3
+   - Move prev to 1, current to 2 (advance pointers)
+   - Now: null <- 1 <- current (2) -> 3
+
+3. Second Iteration:
+   - next points to 3
+   - Reverse link: 2 <- current, but next (3) -> null
+   - Move prev to 2, current to 3
+   - Now: null <- 1 <- 2 <- current (3)
+
+4. Final Iteration:
+   - next is null (end of list)
+   - Reverse link: 3 -> null
+   - current becomes null, loop ends
+   - Final list: null <- 1 <- 2 <- 3
+
+The head of the list now points to 3, achieving the reversed list: 3 -> 2 -> 1 -> null
+
+**Pseudocode**
+```
+1. Initialize three pointers: prev (null), current (head of the list), and next (null).
+
+2. Loop while current is not null:
+ - Set next to current->next (save the next node).
+ - Redirect current->next to prev (reverse the link).
+ - Move prev to current (advance prev up the list).
+ - Move current to next (advance current up the list).
+ 
+3. After the loop, set the head of the list to prev.
+```
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
 ## Solution 
-
-
+Will be released after section! :)
+<!--
 ```
-#include <stdio.h>
+void reverse(node **head) {
+    node *prev = NULL;
+    node *current = *head;
+    node *next = NULL;
 
-void swap(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-int main() {
-    int x = 10;
-    int y = 20;
-    
-    printf("Before swap: x = %d, y = %d\n", x, y);
-    swap(&x, &y);
-    printf("After swap: x = %d, y = %d\n", x, y);
-
-    return 0;
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *head = prev;
 }
 ```
+-->
 
 :::
 
@@ -74,38 +114,22 @@ int main() {
 
 **Background**
 
-Implement a "Brightness Adjustment" filter that modifies the brightness of an image. This filter will either increase or decrease the brightness of every pixel in the image based on a given factor.
-
-- Brightness is determined by the intensity of the RGB components of a pixel.
-
-- Increasing brightness involves adding a constant value to each color component (Red, Green, Blue) of a pixel.
-
-- Decreasing brightness involves subtracting a constant value from each color component.
-
-- It's crucial to ensure that the resulting color values are capped between 0 and 255.
+Hash tables are powerful data structures that allow for efficient data retrieval. They map keys to values, using a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This exercise focuses on understanding how to search for items in a hash table, an essential operation known as a lookup.
 
 **Task**
 
-Implement a function adjust_brightness in helpers.c to increase or decrease the brightness of the image. The function should take an additional parameter, brightness_factor, to control the adjustment level.
+Write a function, `bool lookup(char* word, node* hashtable[], int size)`, that searches for a given word in a hash table. The hash table is represented as an array of linked lists `(node* hashtable[])`, and `size` is the number of buckets in the table. The function should return `true` if the word is found and `false` otherwise.
 
 **Demo**
 
 Will be shown in section
-
-**To Test**
-
-1. Run ```make filter```
-
-2. Run this ```filter-practice/ $ ./filter -g images/yard.bmp out.bmp``` to see the original file in out.bmp
-
-3. Run this ```filter-practice/ $ ./filter -b images/yard.bmp out.bmp``` to see the adjusted brightness photo in out.bmp
 
 
 :::{.callout-note appearance="simple"}
 
 ## Starter Code
 
-Download the starter code file [here](https://drive.google.com/drive/folders/1iZIsj8O5OeGLNOiCaZIi9JBelgWMhJJU?usp=sharing)
+Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/master/section5/Q2.c)
 
 :::
 
@@ -114,18 +138,15 @@ Download the starter code file [here](https://drive.google.com/drive/folders/1iZ
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Pseudocode
-```
-function adjust_brightness(height, width, image, brightness_factor)
-    for each row in image
-        for each pixel in row
-            for each color component (red, green, blue) in pixel
-                new color value = original color value + brightness_factor
-                if new color value > 255
-                    new color value = 255
-                if new color value < 0
-                    new color value = 0
-                update pixel's color component with new color value
 
+```
+1. Hash the Word using the provided hash function: Use the hash function on the input word to determine the index in the hashtable.
+
+2. Traverse the Linked List: At the calculated index, traverse the linked list attached to that bucket.
+   - If the current node's word matches the input word, return True.
+   - If not, move to the next node in the list.
+
+3. Word Not Found: If the end of the list is reached without finding the word, return False.
 ```
 :::
 
@@ -133,61 +154,54 @@ function adjust_brightness(height, width, image, brightness_factor)
 
 ## Solution 
 
+Will be released after section! 
+
+<!--
+
 Solution 1:
 
 ```
-void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
-{
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            image[i][j].rgbtRed = fmin(fmax(image[i][j].rgbtRed + brightness_factor, 0), 255);
-            image[i][j].rgbtGreen = fmin(fmax(image[i][j].rgbtGreen + brightness_factor, 0), 255);
-            image[i][j].rgbtBlue = fmin(fmax(image[i][j].rgbtBlue + brightness_factor, 0), 255);
+bool lookup(const char* word, node* hashtable[]) {
+    unsigned int index = hash(word);
+    node *cursor = hashtable[index];
+    while (cursor != NULL) {
+        if (strcmp(cursor->word, word) == 0) {
+            return true;
         }
+        cursor = cursor->next;
     }
+    return false;
 }
 ```
 
 Solution 2
 
 ```
-void adjust_brightness(int height, int width, RGBTRIPLE image[height][width], int brightness_factor)
-{
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            // Adjust Red, ensuring it remains within 0-255 range
-            int newRed = image[i][j].rgbtRed + brightness_factor;
-            image[i][j].rgbtRed = newRed > 255 ? 255 : (newRed < 0 ? 0 : newRed);
+bool lookup(const char* word, node* hashtable[]) {
+    unsigned int index = hash(word);
 
-            // Adjust Green, ensuring it remains within 0-255 range
-            int newGreen = image[i][j].rgbtGreen + brightness_factor;
-            image[i][j].rgbtGreen = newGreen > 255 ? 255 : (newGreen < 0 ? 0 : newGreen);
-
-            // Adjust Blue, ensuring it remains within 0-255 range
-            int newBlue = image[i][j].rgbtBlue + brightness_factor;
-            image[i][j].rgbtBlue = newBlue > 255 ? 255 : (newBlue < 0 ? 0 : newBlue);
+    // Use a for loop to traverse the linked list
+    for (node *cursor = hashtable[index]; cursor != NULL; cursor = cursor->next) {
+        if (strcmp(cursor->word, word) == 0) {
+            return true; // Word found
         }
     }
+    return false; // Word not found
 }
-
 ```
-
+-->
 :::
 
 
 ## Homework tips
 
-Homework tips are available in the slide: [Slide Section 4](https://docs.google.com/presentation/d/1cffPIcvNUsSZRCr-0T0sPGdefA2oT2AdUe8lIRNNKPg/edit?usp=sharing)
+Homework tips are available in the slide: [Slide Section 5](https://docs.google.com/presentation/d/19kqeQEtSjAVwXkOuCCYKac1H0UnETvxmbBPjXi74EF0/edit?usp=sharing)
 
 
 
 ## Next Week
 For the following section, we will discuss:
 
-- Algorithms! 
+- Python!
 
 $\,$
