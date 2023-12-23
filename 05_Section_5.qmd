@@ -88,8 +88,7 @@ The head of the list now points to 3, achieving the reversed list: 3 -> 2 -> 1 -
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section! :)
-<!--
+
 ```
 void reverse(node **head) {
     node *prev = NULL;
@@ -105,7 +104,6 @@ void reverse(node **head) {
     *head = prev;
 }
 ```
--->
 
 :::
 
@@ -154,10 +152,6 @@ Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/m
 
 ## Solution 
 
-Will be released after section! 
-
-<!--
-
 Solution 1:
 
 ```
@@ -189,7 +183,7 @@ bool lookup(const char* word, node* hashtable[]) {
     return false; // Word not found
 }
 ```
--->
+
 :::
 
 

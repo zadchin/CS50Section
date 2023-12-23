@@ -331,23 +331,19 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :) <!--
-```
-void reverse(node **head) {
+<pre><code>void reverse(node **head) {
     node *prev = NULL;
     node *current = *head;
     node *next = NULL;
 
     while (current != NULL) {
-        next = current->next;
-        current->next = prev;
+        next = current-&gt;next;
+        current-&gt;next = prev;
         prev = current;
         current = next;
     }
     *head = prev;
-}
-```
---></p>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -407,42 +403,30 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section!</p>
-
-<!--
-
-Solution 1:
-
-```
-bool lookup(const char* word, node* hashtable[]) {
+<p>Solution 1:</p>
+<pre><code>bool lookup(const char* word, node* hashtable[]) {
     unsigned int index = hash(word);
     node *cursor = hashtable[index];
     while (cursor != NULL) {
-        if (strcmp(cursor->word, word) == 0) {
+        if (strcmp(cursor-&gt;word, word) == 0) {
             return true;
         }
-        cursor = cursor->next;
+        cursor = cursor-&gt;next;
     }
     return false;
-}
-```
-
-Solution 2
-
-```
-bool lookup(const char* word, node* hashtable[]) {
+}</code></pre>
+<p>Solution 2</p>
+<pre><code>bool lookup(const char* word, node* hashtable[]) {
     unsigned int index = hash(word);
 
     // Use a for loop to traverse the linked list
-    for (node *cursor = hashtable[index]; cursor != NULL; cursor = cursor->next) {
-        if (strcmp(cursor->word, word) == 0) {
+    for (node *cursor = hashtable[index]; cursor != NULL; cursor = cursor-&gt;next) {
+        if (strcmp(cursor-&gt;word, word) == 0) {
             return true; // Word found
         }
     }
     return false; // Word not found
-}
-```
--->
+}</code></pre>
 </div>
 </div>
 </div>
