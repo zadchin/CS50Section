@@ -310,8 +310,13 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Solution 1</strong></p>
-<pre><code>def reverse_string(input_string):
+<p>Will be released after section! :)</p>
+<!--
+
+**Solution 1**
+
+```
+def reverse_string(input_string):
     # Initialize an empty string to store the reversed string
     reversed_string = ""
 
@@ -321,9 +326,13 @@ Solution
         reversed_string += char
 
     # Return the reversed string
-    return reversed_string</code></pre>
-<p><strong>Solution 2</strong></p>
-<pre><code>def reverse_string(input_string):
+    return reversed_string
+```
+
+**Solution 2**
+
+```
+def reverse_string(input_string):
     # Initialize an empty string to store the reversed string
     reversed_string = ""
 
@@ -333,7 +342,9 @@ Solution
         reversed_string += input_string[i]
 
     # Return the reversed string
-    return reversed_string</code></pre>
+    return reversed_string
+```
+-->
 </div>
 </div>
 </div>
@@ -378,17 +389,25 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Solution 1:</strong></p>
-<pre><code>def match_dna(people_dna, sample_dna):
+<p>Will be released after section! :)</p>
+<!--
+**Solution 1:**
+
+```
+def match_dna(people_dna, sample_dna):
     for name, dna_sequence in people_dna.items():
         if dna_sequence == sample_dna:
             return name
     return "No match found"
 
 def contains_strand(dna_sequence, strand):
-    return strand in dna_sequence</code></pre>
-<p><strong>Solution 2</strong></p>
-<pre><code>def match_dna(people_dna, sample_dna):
+    return strand in dna_sequence
+```
+
+**Solution 2**
+
+```
+def match_dna(people_dna, sample_dna):
     matches = [name for name, dna in people_dna.items() if dna == sample_dna]
     return matches[0] if matches else "No match found"
 
@@ -397,7 +416,9 @@ def contains_strand(dna_sequence, strand):
         if dna_sequence[i:i+len(strand)] == strand:
             return True
     return False
-</code></pre>
+
+```
+-->
 </div>
 </div>
 </div>
