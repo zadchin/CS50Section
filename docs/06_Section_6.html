@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CS50 Section Notes - Section 2</title>
+<title>CS50 Section Notes - Section 6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./04_Section_4.html" rel="next">
-<link href="./01_Section_1.html" rel="prev">
+<link href="./05_Section_5.html" rel="prev">
 <link href="./assets/img/cs50duck.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Section 2</h1>
+      <h1 class="quarto-secondary-nav-title">Section 6</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -119,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Section_2.html" class="sidebar-item-text sidebar-link active">Section 2</a>
+  <a href="./02_Section_2.html" class="sidebar-item-text sidebar-link">Section 2</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -134,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link">Section 6</a>
+  <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link active">Section 6</a>
   </div>
 </li>
     </ul>
@@ -152,8 +151,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">Section Problem 1</a></li>
   <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">Section Problem 2</a></li>
-  <li><a href="#section-problem-3" id="toc-section-problem-3" class="nav-link" data-scroll-target="#section-problem-3">Section Problem 3</a></li>
   </ul></li>
+  <li><a href="#homework-tips" id="toc-homework-tips" class="nav-link" data-scroll-target="#homework-tips">Homework tips</a></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/zadchin/CS50Section/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -220,7 +219,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Section 2</h1>
+<h1 class="title d-none d-lg-block">Section 6</h1>
 </div>
 
 
@@ -235,29 +234,36 @@ $$
 
 </header>
 
-<p>Last Updated: 10 Nov 2023</p>
-<p>Date: 10 Nov 2023</p>
+<p>Last Updated: 5 Jan 2024</p>
+<p>Date: 5 Jan 2024</p>
 <section id="this-week" class="level2">
 <h2 class="anchored" data-anchor-id="this-week">This Week</h2>
-<p>In this section, we will discuss:</p>
+<p>Happy New Year! In this section, we will discuss:</p>
 <ul>
-<li>Array</li>
-<li>String</li>
-<li>Command Line Argument</li>
+<li>Python</li>
 </ul>
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/1hXexoeU-Bq_WKdOZvESQSUM0wd2YPNAA6g9FvRU9PP8/edit?usp=sharing">Slide Section 2</a></p>
+<p>Slides deck are available here: <a href="https://docs.google.com/presentation/d/1hEMZSTMyGSZIfdK4ouuB2VVUVdhrV-97H4cXxp5G-lU/edit?usp=sharing">Slide Section 6</a></p>
+<p>Walkthrough code is available at <a href="https://github.com/zadchin/CS50_Practice-Question/blob/master/section6">Code walkthrough</a></p>
 </section>
 <section id="section-practice-problems" class="level2">
 <h2 class="anchored" data-anchor-id="section-practice-problems">Section Practice Problems</h2>
 <section id="section-problem-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-1">Section Problem 1</h3>
-<p><strong>Background</strong></p>
-<p>In a classroom, a teacher keeps track of the attendance of students. Each student is assigned a seat number, and their attendance status is recorded as present (1) or absent (0) for a particular day.</p>
 <p><strong>Task</strong></p>
-<p>Write a program in C that allows the teacher to enter the attendance status for each student and then displays the total number of students present and absent on that day.</p>
+<p>Write a Python function that takes a string as input and returns the reversed string. This problem will help students get accustomed to string manipulation in Python, which is significantly different from C due to Python’s high-level string handling capabilities.</p>
+<ul>
+<li><p>Define a function <code>reverse_string</code> which takes a single parameter, a string.</p></li>
+<li><p>The function should return a new string which is the reverse of the input string.</p></li>
+<li><p>Do not use any built-in Python functions or slicing for reversing the string. Implement it using a loop to mimic the manual string manipulation they might be used to in C.</p></li>
+</ul>
+<p><strong>Sample Input and Output:</strong></p>
+<p>Input: “hello”</p>
+<p>Output: “olleh”</p>
+<p>Input: “Python”</p>
+<p>Output: “nohtyP”</p>
 <p><strong>Demo</strong></p>
 <p>Demo in Section</p>
 <div class="callout-note callout callout-style-simple callout-captioned">
@@ -270,30 +276,7 @@ Starter Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Copy and following the following code to a new C file in CS50 codespace to start coding!</p>
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
-
-#define CLASS_SIZE 5
-
-int main(void) {
-    int attendance[CLASS_SIZE];
-    int present = 0;
-    int absent = 0;
-
-    // Ask the teacher to enter attendance
-    printf("Enter the attendance for each student (1 for present, 0 for absent):\n");
-    for (int i = 0; i &lt; CLASS_SIZE; i++) {
-        // Use get_int() to get input from user
-        attendance[i] = get_int("Student %d: ", i + 1);
-        
-        // TODO: Add code to count presents and absents
-    }
-    
-    // TODO: Add code to display the total presents and absents
-    
-    return 0;
-}</code></pre>
+<p>Copy the code at <a href="https://github.com/zadchin/CS50_Practice-Question/blob/master/section6/Q1.py">here</a></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-simple callout-captioned">
@@ -302,65 +285,74 @@ int main(void) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solution
+Tips
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
+<ol type="1">
+<li><p>You might start by initializing an empty string that will store the reversed string.</p></li>
+<li><p>Iterate over the input string in reverse order (you can use a loop for this) and concatenate each character to the empty string.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Solution 1</strong></p>
+<pre><code>def reverse_string(input_string):
+    # Initialize an empty string to store the reversed string
+    reversed_string = ""
 
-#define CLASS_SIZE 10
+    # Iterate over the input_string in reverse order
+    for char in input_string[::-1]:
+        # Concatenate each character to reversed_string
+        reversed_string += char
 
-int main(void) {
-    int attendance[CLASS_SIZE];
-    int present = 0;
-    int absent = 0;
+    # Return the reversed string
+    return reversed_string</code></pre>
+<p><strong>Solution 2</strong></p>
+<pre><code>def reverse_string(input_string):
+    # Initialize an empty string to store the reversed string
+    reversed_string = ""
 
-    printf("Enter the attendance for each student (1 for present, 0 for absent):\n");
-    for (int i = 0; i &lt; CLASS_SIZE; i++) {
-        // Use get_int() to get input from user
-        attendance[i] = get_int("Student %d: ", i + 1);
-        
-        // Tally presents and absents
-        if (attendance[i] == 1) {
-            present++;
-        } 
-        else if (attendance[i] == 0)  {
-            absent++;
-        }
-        else {
-            printf("Error: Attendance needs to be 0 or 1 \n");
-            return 1;
-        }
-    }
+    # Iterate over the input_string in reverse order
+    for i in range(len(input_string) - 1, -1, -1):
+        # Concatenate each character to reversed_string
+        reversed_string += input_string[i]
 
-    // Display the total presents and absents
-    printf("Total present: %d\n", present);
-    printf("Total absent: %d\n", absent);
-    
-    return 0;
-}</code></pre>
+    # Return the reversed string
+    return reversed_string</code></pre>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-2">Section Problem 2</h3>
-<p><strong>Background</strong></p>
-<p>Gen Z often use acronyms to help remember lists or sequences, for example:</p>
-<ul>
-<li>YOLO- You only live once</li>
-<li>FOMO – Fear of missing out</li>
-<li>GOAT – Greatest of all time</li>
-</ul>
-<p>Let’s create a program that generates an acronym from a list of words.</p>
 <p><strong>Task</strong></p>
-<p>Write a program in C that:</p>
-<p>Asks the user to input a certain number of words, stored in an array of strings. Generates an acronym by taking the first letter of each word and concatenating them. Converts the acronym to uppercase. Prints out the final acronym.</p>
+<p>Write a Python program that can implement two functions: <code>match_dna</code> and <code>contains_strand</code>.</p>
+<ol type="1">
+<li><p><code>match_dna</code> should take a dictionary of people with their DNA sequences and a DNA sequence to be matched. It returns the person’s name if a match is found or “No match found” otherwise.</p></li>
+<li><p><code>contains_strand</code> should take an individual’s DNA sequence and a DNA strand to search for. It returns True if the strand is found within the sequence and False otherwise.</p></li>
+</ol>
+<p><strong>Sample Input and Output:</strong></p>
+<p>DNA Sequence: “CTGACTGAACTGACCTGA”, Strand: “ACTGA”</p>
+<p>Output: True</p>
+<p>DNA Sequence: “TCCAGTCCAGTCCAG”, Strand: “ACGT”</p>
+<p>Output: False</p>
 <p><strong>Demo</strong></p>
-<p>Demo in Section</p>
+<p>Will be shown in section</p>
 <div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -371,35 +363,11 @@ Starter Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Copy and following the following code to a new C file in CS50 codespace to start coding!</p>
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#include &lt;ctype.h&gt;
-
-#define WORD_COUNT 4 // Number of words in the acronym
-
-int main(void) {
-    string words[WORD_COUNT];
-    
-    //TODO: Initialize acronym
-
-    // Prompt user for words
-    for (int i = 0; i &lt; WORD_COUNT; i++) {
-        words[i] = get_string("Enter word %d: ", i + 1);
-    }
-
-    // TODO: Generate the acronym from the first letter of each word
-    
-    // TODO: Print the acronym
-    
-    return 0;
-}
-</code></pre>
+<p>Copy the code at <a href="https://github.com/zadchin/CS50_Practice-Question/blob/master/section6/Q2.py">here</a></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -408,134 +376,43 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#include &lt;ctype.h&gt;
+<p><strong>Solution 1:</strong></p>
+<pre><code>def match_dna(people_dna, sample_dna):
+    for name, dna_sequence in people_dna.items():
+        if dna_sequence == sample_dna:
+            return name
+    return "No match found"
 
-#define WORD_COUNT 4 // Number of words in the acronym
+def contains_strand(dna_sequence, strand):
+    return strand in dna_sequence</code></pre>
+<p><strong>Solution 2</strong></p>
+<pre><code>def match_dna(people_dna, sample_dna):
+    matches = [name for name, dna in people_dna.items() if dna == sample_dna]
+    return matches[0] if matches else "No match found"
 
-int main(void) {
-    string words[WORD_COUNT];
-    char acronym[WORD_COUNT + 1]; // +1 for the null terminator
-
-    // Prompt user for words
-    for (int i = 0; i &lt; WORD_COUNT; i++) {
-        words[i] = get_string("Enter word %d: ", i + 1);
-    }
-
-    // Generate the acronym from the first letter of each word
-    for (int i = 0; i &lt; WORD_COUNT; i++) {
-        // Check if the first character is a letter
-        if (isalpha(words[i][0])) {
-            acronym[i] = toupper(words[i][0]);
-        } 
-        else {
-            // Handle the case where the first character is not a letter
-            // Placeholder character or print error
-            acronym[i] = 'X';
-        }
-    }
-
-    // Null-terminate the acronym string
-    acronym[WORD_COUNT] = '\0';
-
-    // Print the final acronym
-    printf("The acronym is: %s\n", acronym);
-    
-    return 0;
-}
+def contains_strand(dna_sequence, strand):
+    for i in range(len(dna_sequence) - len(strand) + 1):
+        if dna_sequence[i:i+len(strand)] == strand:
+            return True
+    return False
 </code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="section-problem-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-3">Section Problem 3</h3>
-<p><strong>Background and Task</strong></p>
-<p>For the acronym generator, the words that form the acronym can be passed as command-line arguments. Recode the origin code files to take words from command-line arguments to create the acronym.</p>
-<p><strong>Demo</strong></p>
-<p>Demo in Section</p>
-<div class="callout-note callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Starter Code
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Copy and following the following code to a new C file in CS50 codespace to start coding!</p>
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#include &lt;ctype.h&gt;
-
-int main(int argc, string argv[]) {
-    // TODO: Fill up ... to make sure users give at least a certain argc
-    if (...) {
-        printf("Usage: ./acronym word1 word2 ... wordN\n");
-        return 1;
-    }
-
-    // TODO: Generate and print the acronym from command-line arguments
-    
-    return 0;
-}
-</code></pre>
-</div>
-</div>
-<div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<pre><code>#include &lt;cs50.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#include &lt;ctype.h&gt;
-
-int main(int argc, string argv[]) {
-    if (argc &lt; 2) {
-        printf("Usage: ./acronym word1 word2 ... wordN\n");
-        return 1;
-    }
-
-    for (int i = 1; i &lt; argc; i++) {
-        if (isalpha(argv[i][0])) {
-            printf("%c", toupper(argv[i][0]));
-        }
-    }
-    printf("\n");
-    
-    return 0;
-}
-</code></pre>
-</div>
-</div>
-</div>
 </section>
+<section id="homework-tips" class="level2">
+<h2 class="anchored" data-anchor-id="homework-tips">Homework tips</h2>
+<p>Homework tips are available in the slide: <a href="https://docs.google.com/presentation/d/1hEMZSTMyGSZIfdK4ouuB2VVUVdhrV-97H4cXxp5G-lU/edit?usp=sharing">Slide Section 6</a></p>
 </section>
 <section id="next-week" class="level2">
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
-<p>Next week, we will discuss:</p>
+<p>For the following section, we will discuss:</p>
 <ul>
-<li>Structures in C</li>
-<li>Sorting</li>
-<li>Searching</li>
-<li>Recursion</li>
+<li>SQL!</li>
 </ul>
-<p>Note: I am out for the next section.Margaret Tanzosh will replace me for the section. Refer her materials.</p>
 <p><span class="math inline">\(\,\)</span></p>
 
 
@@ -792,14 +669,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01_Section_1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 1</span>
+      <a href="./05_Section_5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 5</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04_Section_4.html" class="pagination-link">
-        <span class="nav-page-text">Section 4</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

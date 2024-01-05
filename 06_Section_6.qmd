@@ -1,0 +1,191 @@
+# Section 6 {.unnumbered}
+
+Last Updated: 5 Jan 2024
+
+Date:  5 Jan 2024
+
+
+## This Week
+
+Happy New Year! In this section, we will discuss:
+
+- Python
+
+
+## Slides
+
+Slides deck are available here: [Slide Section 6](https://docs.google.com/presentation/d/1hEMZSTMyGSZIfdK4ouuB2VVUVdhrV-97H4cXxp5G-lU/edit?usp=sharing)
+
+Walkthrough code is available at [Code walkthrough](https://github.com/zadchin/CS50_Practice-Question/blob/master/section6)
+
+## Section Practice Problems
+
+### Section Problem 1
+
+
+**Task**
+
+Write a Python function that takes a string as input and returns the reversed string. This problem will help students get accustomed to string manipulation in Python, which is significantly different from C due to Python's high-level string handling capabilities.
+
+- Define a function `reverse_string` which takes a single parameter, a string.
+
+- The function should return a new string which is the reverse of the input string.
+
+- Do not use any built-in Python functions or slicing for reversing the string. Implement it using a loop to mimic the manual string manipulation they might be used to in C.
+
+**Sample Input and Output:**
+
+Input: "hello"
+
+Output: "olleh"
+
+Input: "Python"
+
+Output: "nohtyP"
+
+**Demo**
+
+Demo in Section
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/master/section6/Q1.py)
+
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Tips
+
+1. You might start by initializing an empty string that will store the reversed string.
+
+2. Iterate over the input string in reverse order (you can use a loop for this) and concatenate each character to the empty string.
+
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+
+**Solution 1**
+
+```
+def reverse_string(input_string):
+    # Initialize an empty string to store the reversed string
+    reversed_string = ""
+
+    # Iterate over the input_string in reverse order
+    for char in input_string[::-1]:
+        # Concatenate each character to reversed_string
+        reversed_string += char
+
+    # Return the reversed string
+    return reversed_string
+```
+
+**Solution 2**
+
+```
+def reverse_string(input_string):
+    # Initialize an empty string to store the reversed string
+    reversed_string = ""
+
+    # Iterate over the input_string in reverse order
+    for i in range(len(input_string) - 1, -1, -1):
+        # Concatenate each character to reversed_string
+        reversed_string += input_string[i]
+
+    # Return the reversed string
+    return reversed_string
+```
+
+:::
+
+
+### Section Problem 2
+
+**Task**
+
+Write a Python program that can implement two functions: `match_dna` and `contains_strand`.
+
+1. `match_dna` should take a dictionary of people with their DNA sequences and a DNA sequence to be matched. It returns the person's name if a match is found or "No match found" otherwise.
+
+2. `contains_strand` should take an individual's DNA sequence and a DNA strand to search for. It returns True if the strand is found within the sequence and False otherwise.
+
+**Sample Input and Output:**
+
+
+DNA Sequence: "CTGACTGAACTGACCTGA", Strand: "ACTGA"
+
+Output: True
+
+DNA Sequence: "TCCAGTCCAGTCCAG", Strand: "ACGT"
+
+Output: False
+
+**Demo**
+
+Will be shown in section
+
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/master/section6/Q2.py)
+
+:::
+
+
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+**Solution 1:**
+
+```
+def match_dna(people_dna, sample_dna):
+    for name, dna_sequence in people_dna.items():
+        if dna_sequence == sample_dna:
+            return name
+    return "No match found"
+
+def contains_strand(dna_sequence, strand):
+    return strand in dna_sequence
+```
+
+**Solution 2**
+
+```
+def match_dna(people_dna, sample_dna):
+    matches = [name for name, dna in people_dna.items() if dna == sample_dna]
+    return matches[0] if matches else "No match found"
+
+def contains_strand(dna_sequence, strand):
+    for i in range(len(dna_sequence) - len(strand) + 1):
+        if dna_sequence[i:i+len(strand)] == strand:
+            return True
+    return False
+
+```
+
+:::
+
+
+## Homework tips
+
+Homework tips are available in the slide: [Slide Section 6](https://docs.google.com/presentation/d/1hEMZSTMyGSZIfdK4ouuB2VVUVdhrV-97H4cXxp5G-lU/edit?usp=sharing)
+
+
+
+## Next Week
+For the following section, we will discuss:
+
+- SQL!
+
+$\,$
