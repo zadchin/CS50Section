@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./08_Section_8.html" rel="next">
 <link href="./05_Section_5.html" rel="prev">
 <link href="./assets/img/cs50duck.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -134,6 +135,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link active">Section 6</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Section_8.html" class="sidebar-item-text sidebar-link">Section 8</a>
   </div>
 </li>
     </ul>
@@ -310,13 +316,8 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-
-**Solution 1**
-
-```
-def reverse_string(input_string):
+<p><strong>Solution 1</strong></p>
+<pre><code>def reverse_string(input_string):
     # Initialize an empty string to store the reversed string
     reversed_string = ""
 
@@ -326,13 +327,9 @@ def reverse_string(input_string):
         reversed_string += char
 
     # Return the reversed string
-    return reversed_string
-```
-
-**Solution 2**
-
-```
-def reverse_string(input_string):
+    return reversed_string</code></pre>
+<p><strong>Solution 2</strong></p>
+<pre><code>def reverse_string(input_string):
     # Initialize an empty string to store the reversed string
     reversed_string = ""
 
@@ -342,9 +339,7 @@ def reverse_string(input_string):
         reversed_string += input_string[i]
 
     # Return the reversed string
-    return reversed_string
-```
--->
+    return reversed_string</code></pre>
 </div>
 </div>
 </div>
@@ -389,25 +384,17 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-**Solution 1:**
-
-```
-def match_dna(people_dna, sample_dna):
+<p><strong>Solution 1:</strong></p>
+<pre><code>def match_dna(people_dna, sample_dna):
     for name, dna_sequence in people_dna.items():
         if dna_sequence == sample_dna:
             return name
     return "No match found"
 
 def contains_strand(dna_sequence, strand):
-    return strand in dna_sequence
-```
-
-**Solution 2**
-
-```
-def match_dna(people_dna, sample_dna):
+    return strand in dna_sequence</code></pre>
+<p><strong>Solution 2</strong></p>
+<pre><code>def match_dna(people_dna, sample_dna):
     matches = [name for name, dna in people_dna.items() if dna == sample_dna]
     return matches[0] if matches else "No match found"
 
@@ -416,9 +403,7 @@ def contains_strand(dna_sequence, strand):
         if dna_sequence[i:i+len(strand)] == strand:
             return True
     return False
-
-```
--->
+</code></pre>
 </div>
 </div>
 </div>
@@ -695,6 +680,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./08_Section_8.html" class="pagination-link">
+        <span class="nav-page-text">Section 8</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

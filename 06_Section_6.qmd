@@ -68,9 +68,6 @@ Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/m
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section! :)
-
-<!--
 
 **Solution 1**
 
@@ -103,7 +100,7 @@ def reverse_string(input_string):
     # Return the reversed string
     return reversed_string
 ```
--->
+
 :::
 
 
@@ -148,9 +145,6 @@ Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/blob/m
 
 ## Solution 
 
-Will be released after section! :)
-
-<!--
 **Solution 1:**
 
 ```
@@ -178,7 +172,6 @@ def contains_strand(dna_sequence, strand):
     return False
 
 ```
--->
 :::
 
 
