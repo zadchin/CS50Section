@@ -157,6 +157,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">Section Problem 1</a></li>
   <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">Section Problem 2</a></li>
   </ul></li>
+  <li><a href="#publishing-your-website" id="toc-publishing-your-website" class="nav-link" data-scroll-target="#publishing-your-website">Publishing your website</a></li>
   <li><a href="#homework-tips" id="toc-homework-tips" class="nav-link" data-scroll-target="#homework-tips">Homework tips</a></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
@@ -331,58 +332,53 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <h2><span style="background: linear-gradient(to right, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%); -webkit-background-clip: text; color: transparent;"> Event Registration</span></h2> 
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <label>Session Selection:</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="session1">
-                    <label class="form-check-label" for="session1">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Event Registration&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h2&gt;&lt;span style="background: linear-gradient(to right, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%); -webkit-background-clip: text; color: transparent;"&gt; Event Registration&lt;/span&gt;&lt;/h2&gt; 
+        &lt;form&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="name"&gt;Name&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="name" placeholder="Enter your name"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="email" placeholder="Enter your email"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label&gt;Session Selection:&lt;/label&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" value="" id="session1"&gt;
+                    &lt;label class="form-check-label" for="session1"&gt;
                         Session 1: Introduction to HTML
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="session2">
-                    <label class="form-check-label" for="session2">
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" value="" id="session2"&gt;
+                    &lt;label class="form-check-label" for="session2"&gt;
                         Session 2: Advanced CSS
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="session2">
-                    <label class="form-check-label" for="session2">
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" value="" id="session2"&gt;
+                    &lt;label class="form-check-label" for="session2"&gt;
                         Session32: Javascript Fundamentals
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
-    </div>
-</body>
-</html>
-
-```
--->
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Register&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 </div>
 </div>
 </div>
@@ -430,11 +426,8 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! :)</p>
-<!--
-**Without Optional include**
-```
-<script>
+<p><strong>Without Optional include</strong></p>
+<pre><code>&lt;script&gt;
     document.addEventListener('DOMContentLoaded', function () {
         const submitButton = document.querySelector('button[type="submit"]');
         const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="checkbox"]');
@@ -443,19 +436,15 @@ Solution
             alert("Thank you for registering!");
         });
     });
-</script>
-```
-
-**Include Optional**
-
-```
-<script>
+&lt;/script&gt;</code></pre>
+<p><strong>Include Optional</strong></p>
+<pre><code>&lt;script&gt;
     document.addEventListener('DOMContentLoaded', function () {
         const submitButton = document.querySelector('button[type="submit"]');
         const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="checkbox"]');
         
         submitButton.addEventListener('click', function (event) {
-            let isEmptyField = Array.from(inputs).some(input => input.type !== "checkbox" && input.value === ""); // Basic validation for text and email
+            let isEmptyField = Array.from(inputs).some(input =&gt; input.type !== "checkbox" &amp;&amp; input.value === ""); // Basic validation for text and email
 
             if (isEmptyField) {
                 alert("Please fill in all fields.");
@@ -464,13 +453,34 @@ Solution
             }
         });
     });
-</script>
-```
--->
+&lt;/script&gt;</code></pre>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="publishing-your-website" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-your-website">Publishing your website</h2>
+<p>You can always publish you website **for free* with Github - particularly <a href="https://pages.github.com/">Github Pages</a>.</p>
+<p>The steps are generally:</p>
+<ol type="1">
+<li><p>Sign up / Login your Github account</p></li>
+<li><p>Create a new repository</p></li>
+<li><p>Upload your files (html, css and javascript)</p></li>
+<li><p>Go to Settings (top bar), under Pages (left hand bar), under Build &amp; Deployment, under branch, choose master/(root)</p></li>
+<li><p>Wait for 5-10 minutes, you can see your website publishing journey under the Action (on the top bar).</p></li>
+</ol>
+<p>Some tutorial that might be helpful:</p>
+<ul>
+<li><a href="https://www.google.com/search?q=github+pages&amp;oq=github+pages&amp;sourceid=chrome&amp;ie=UTF-8">Khan Academy Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=OltY8JIaP-4">You Tube Tutorial</a></li>
+</ul>
+<p><strong>Some Notes</strong></p>
+<ol type="1">
+<li><p>You can add your custom domain name. Let’s say you bought a domain call “zadchin.com” and your want your website to be here instead of “zadchin.github.io/blahblah”. you can read the documentation <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">here</a> to see how to do that.</p></li>
+<li><p>The website you publsih is technically public. Anyone in this world, with the link, can access the website.</p></li>
+<li><p>You cannot publish a dynamic website (ie: website with database or using Python Flask) with Github Pages. For that, you will need paid services like AWS or Heroku. Heroku does let you publish Python Flask website with Github repositories, but they charge per visit/per utilities basis.</p></li>
+</ol>
 </section>
 <section id="homework-tips" class="level2">
 <h2 class="anchored" data-anchor-id="homework-tips">Homework tips</h2>

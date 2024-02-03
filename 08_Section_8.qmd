@@ -83,9 +83,6 @@ On styling with bootstrap, using [container](https://getbootstrap.com/docs/5.0/l
 
 ## Solution 
 
-Will be released after section! :)
-
-<!--
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +132,6 @@ Will be released after section! :)
 </html>
 
 ```
--->
 
 :::
 
@@ -175,9 +171,6 @@ Your original code or Copy the code at link will be sent in the groupchat link i
 
 ## Solution 
 
-Will be released after section! :)
-
-<!--
 **Without Optional include**
 ```
 <script>
@@ -212,10 +205,37 @@ Will be released after section! :)
     });
 </script>
 ```
--->
 
 :::
 
+## Publishing your website
+
+You can always publish you website **for free* with Github - particularly [Github Pages](https://pages.github.com/).
+
+The steps are generally:
+
+1. Sign up / Login your Github account
+
+2. Create a new repository
+
+3. Upload your files (html, css and javascript)
+
+4. Go to Settings (top bar), under Pages (left hand bar), under Build & Deployment, under branch, choose master/(root)
+
+5. Wait for 5-10 minutes, you can see your website publishing journey under the Action (on the top bar).
+
+Some tutorial that might be helpful:
+
+- [Khan Academy Tutorial](https://www.google.com/search?q=github+pages&oq=github+pages&sourceid=chrome&ie=UTF-8)
+- [You Tube Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4)
+
+**Some Notes**
+
+1. You can add your custom domain name. Let's say you bought a domain call "zadchin.com" and your want your website to be here instead of "zadchin.github.io/blahblah". you can read the documentation [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages) to see how to do that.
+
+2. The website you publsih is technically public. Anyone in this world, with the link, can access the website.
+
+3. You cannot publish a dynamic website (ie: website with database or using Python Flask) with Github Pages. For that, you will need paid services like AWS or Heroku. Heroku does let you publish Python Flask website with Github repositories, but they charge per visit/per utilities basis.
 
 ## Homework tips
 
