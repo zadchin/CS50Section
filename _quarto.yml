@@ -22,6 +22,7 @@ book:
     - 05_Section_5.qmd
     - 06_Section_6.qmd
     - 08_Section_8.qmd
+    - 09_Section_9.qmd
 
 bibliography: references.bib
 

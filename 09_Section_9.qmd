@@ -1,0 +1,105 @@
+# Section 9 {.unnumbered}
+
+Last Updated: 16 Feb 2024
+
+Date:  16 Feb 2024
+
+
+## This Week
+
+In this section, we will discuss:
+
+- Flask 
+- Jinja
+- SQlite
+
+
+## Slides
+
+Slides deck are available here: [Slide Section 9](https://docs.google.com/presentation/d/1RygwWqupy94zSN88NMSckb41WiA6TaF3J7iL9MSrLAw/edit?usp=sharing)
+
+
+## Section Practice Problems
+
+### Section Problem 1
+
+**Background**
+
+You are tasked with implementing a background task within the Flask application that records each login attempt. This record should include the username, and the result of the attempt (success or failure). For simplicity, these records can be stored in a simple text file or a more sophisticated solution like a database, depending on the student's level of experience.
+
+**Task**
+
+1. Within ```login``` function in ```app.py``` of your HTML, construct a form that includes:
+
+- (Done) Check if the user has login, yes - return template welcome.html
+- If method == POST
+  - get username and password
+  - if match, redirect to ```welcome.html```
+  - else ```flash('Invalid username or password')```
+- else (If method == GET)
+  - redirect to ```login.html```
+
+
+**Demo**
+
+Demo in Section
+
+:::{.callout-note appearance="simple"}
+
+## Starter Code
+
+Copy the code at [here](https://github.com/zadchin/CS50_Practice-Question/tree/master/section9)
+
+
+
+:::
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+Will be released after section! :)
+<!--
+```
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    # Check if the user is already logged in
+    if 'username' in session:
+        return render_template('welcome.html')
+
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if username == correct_username and password == correct_password:
+            session['username'] = username  # Set username in the session
+            return  render_template('welcome.html')
+        else:
+            flash('Invalid username or password')  # Flash a message to the next page
+            
+    # Show the login form
+    return render_template('login.html')
+```
+-->
+:::
+
+
+
+
+## Homework tips
+
+Start Early this week! This problem set is very long and complicated!
+
+
+Homework tips are available in the slide: [Slide Section 9](https://docs.google.com/presentation/d/1RygwWqupy94zSN88NMSckb41WiA6TaF3J7iL9MSrLAw/edit?usp=sharing)
+
+Refer to Slide 60! Really helpful for your finance problem set! :)
+
+
+
+## Next Week
+For the following section, we will discuss:
+
+- This is our last section! It has been my pleasure teaching y'all. :)
+
+$\,$
