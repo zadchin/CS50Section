@@ -235,7 +235,7 @@
     "href": "09_Section_9.html#section-practice-problems",
     "title": "Section 9",
     "section": "Section Practice Problems",
-    "text": "Section Practice Problems\n\nSection Problem 1\nBackground\nYou are tasked with implementing a background task within the Flask application that records each login attempt. This record should include the username, and the result of the attempt (success or failure). For simplicity, these records can be stored in a simple text file or a more sophisticated solution like a database, depending on the student’s level of experience.\nTask\n\nWithin login function in app.py of your HTML, construct a form that includes:\n\n\n(Done) Check if the user has login, yes - return template welcome.html\nIf method == POST\n\nget username and password\nif match, redirect to welcome.html\nelse flash('Invalid username or password')\n\nelse (If method == GET)\n\nredirect to login.html\n\n\nDemo\nDemo in Section\n\n\n\n\n\n\nStarter Code\n\n\n\nCopy the code at here\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWill be released after section! :)"
+    "text": "Section Practice Problems\n\nSection Problem 1\nBackground\nYou are tasked with implementing a background task within the Flask application that records each login attempt. This record should include the username, and the result of the attempt (success or failure). For simplicity, these records can be stored in a simple text file or a more sophisticated solution like a database, depending on the student’s level of experience.\nTask\n\nWithin login function in app.py of your HTML, construct a form that includes:\n\n\n(Done) Check if the user has login, yes - return template welcome.html\nIf method == POST\n\nget username and password\nif match, redirect to welcome.html\nelse flash('Invalid username or password')\n\nelse (If method == GET)\n\nredirect to login.html\n\n\nDemo\nDemo in Section\n\n\n\n\n\n\nStarter Code\n\n\n\nCopy the code at here\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n@app.route('/', methods=['GET', 'POST'])\ndef login():\n    # Check if the user is already logged in\n    if 'username' in session:\n        return render_template('welcome.html')\n\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        if username == correct_username and password == correct_password:\n            session['username'] = username  # Set username in the session\n            return  render_template('welcome.html')\n        else:\n            flash('Invalid username or password')  # Flash a message to the next page\n            \n    # Show the login form\n    return render_template('login.html')"
   },
   {
     "objectID": "09_Section_9.html#homework-tips",
@@ -249,6 +249,13 @@
     "href": "09_Section_9.html#next-week",
     "title": "Section 9",
     "section": "Next Week",
-    "text": "Next Week\nFor the following section, we will discuss:\n\nThis is our last section! It has been my pleasure teaching y’all. :)\n\n\\(\\,\\)"
+    "text": "Next Week\nFor the following section, we will discuss:\n\nThis is our last section! It has been my pleasure teaching y’all. :)"
+  },
+  {
+    "objectID": "09_Section_9.html#group-photos",
+    "href": "09_Section_9.html#group-photos",
+    "title": "Section 9",
+    "section": "Group Photos",
+    "text": "Group Photos\n\n\\(\\,\\)"
   }
 ]
